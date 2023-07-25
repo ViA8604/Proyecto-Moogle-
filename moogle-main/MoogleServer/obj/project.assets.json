@@ -1,0 +1,92 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "MoogleEngine/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/MoogleEngine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MoogleEngine.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MoogleEngine/1.0.0": {
+      "type": "project",
+      "path": "../MoogleEngine/MoogleEngine.csproj",
+      "msbuildProject": "../MoogleEngine/MoogleEngine.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "MoogleEngine >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/via/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/via/Documentos/codigo/MOOGLE/moogle-main/moogle-main/MoogleServer/MoogleServer.csproj",
+      "projectName": "MoogleServer",
+      "projectPath": "/home/via/Documentos/codigo/MOOGLE/moogle-main/moogle-main/MoogleServer/MoogleServer.csproj",
+      "packagesPath": "/home/via/.nuget/packages/",
+      "outputPath": "/home/via/Documentos/codigo/MOOGLE/moogle-main/moogle-main/MoogleServer/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/via/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "/home/via/Documentos/codigo/MOOGLE/moogle-main/moogle-main/MoogleEngine/MoogleEngine.csproj": {
+              "projectPath": "/home/via/Documentos/codigo/MOOGLE/moogle-main/moogle-main/MoogleEngine/MoogleEngine.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.107/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
