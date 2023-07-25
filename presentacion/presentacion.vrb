@@ -1,0 +1,15 @@
+\begin{lstlisting}
+
+
+    if(array[j].Score > array[Maxindice].Score)
+          {
+            Maxindice = j;
+          }
+         }
+         Document temporal = array[Maxindice] ;
+         array[Maxindice] = array[i] ;
+         array[i] = temporal ;
+        }
+    }
+\end{lstlisting}
+
