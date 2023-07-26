@@ -44,19 +44,31 @@ crear_pdf(){
 #Funcion para mostrar los pdf
 show_pdf(){
     
-    if [ -f "${DIRECTORY}/${FILENAME}.pdf" ];then
+    if [ -f "${DIRECTORY}/${FILENAME}.pdf" ]; then
         echo "Mostrando ${FILENAME}.pdf..."
-        if command -v xdg-open &>/dev/null; then
-            xdg-open "${DIRECTORY}/${FILENAME}.pdf"
-        
-        elif command -v open &>/dev/null; then
-            open "${DIRECTORY}/${FILENAME}.pdf"
-        
-        else
-            echo "Lector de PDF no disponible"
+
+        viewer=""
+        if [ $# -eq 2 ]; then
+         viewer="$2"
         fi
-    else 
-        echo "El archivo ${FILENAME}.pdf no existe"
+
+        if [ -z "$viewer" ]; then
+            if command -v xdg-open &>/dev/null; then
+                viewer="xdg-open"
+                elif command -v open &>/dev/null; then
+                viewer="open"
+            fi
+        fi 
+
+        if [ -n "$viewer" ]; then
+            $viewer "${DIRECTORY}/${FILENAME}.pdf"
+            else
+                echo "Lector de PDF no disponible"
+        fi
+        
+         else
+         echo "El archivo ${FILENAME}.pdf no existe"
+
         crear_pdf
         show_pdf
     fi
@@ -73,6 +85,10 @@ clean_files(){
 
     echo "Archivos auxiliares eliminados"
 }
+
+
+
+
 
 # Main
 case "$1" in
